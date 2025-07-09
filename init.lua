@@ -74,6 +74,11 @@ vim.opt.scrolloff = 10
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- [[ Neovide configuration ]]
+if vim.g.neovide then
+  vim.o.guifont = 'TX-02:h12'
+end
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -569,6 +574,7 @@ require('lazy').setup({
             return vim.loop.cwd()
           end,
         },
+        lexical = {},
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
